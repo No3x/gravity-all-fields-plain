@@ -12,6 +12,8 @@ Put ``gravity_all_fields_plain.php`` into your ``mu-plugins/`` directory.
 OR
 Copy the Code from ``gravity_all_fields_plain.php`` into you ``functions.php``
 
+Then you can use the {all_fields_plain} placeholder in your notifications.
+
 ## Bugs ##
 If you find an issue, let us know in the [Tracker](https://github.com/No3x/gravity-all-fields-plain/issues?state=open)!
 

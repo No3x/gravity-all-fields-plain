@@ -3,10 +3,10 @@
    Plugin Name: Gravity Forms all_fields plain
    Plugin URI: http://wordpress.org/extend/plugins/gravity-all-fields-plain/
    Support URI: https://github.com/No3x/gravity-all-fields-plain/issues
-   Version: 1.0.2
+   Version: 1.0.3
    Author: Christian Z&ouml;ller
    Author URI: http://no3x.de/
-   Description: Use all_fields placeholder in gravityforms notification template but without html.
+   Description: Use all_fields placeholder in Gravity Forms notification template but without html.
    License: GPLv3
 */
 

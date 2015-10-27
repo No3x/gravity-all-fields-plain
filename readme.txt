@@ -6,9 +6,9 @@ License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 Requires at least: 3.0
 Tested up to: 4.3.1
-Stable tag: 1.0.2
+Stable tag: 1.0.3
 
-fields_all placeholder without html.
+all_fields placeholder without html.
 
 == Description ==
 
@@ -18,7 +18,7 @@ Use all_fields placeholder in Gravity Forms notification template but without ht
 
 Features of the plugin include:
 
- * New placeholder {fields_all_plain}
+ * New placeholder {all_fields_plain}
 
 Features of the plugin not include:
 
@@ -40,9 +40,12 @@ Put gravity_all_fields_plain.php into your mu-plugins/ directory.
 OR
 Copy the Code from gravity_all_fields_plain.php into you functions.php
 
-Then you can use the {fields_all_plain} placeholder in your notifications.
+Then you can use the {all_fields_plain} placeholder in your notifications.
 
 == Changelog ==
+
+= 1.0.3, October 27, 2015 =
+- Fixed placeholder name in descriptions.
 
 = 1.0.2, October 27, 2015 =
 - Changed plugin display name.
