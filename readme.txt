@@ -6,7 +6,7 @@ License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 Requires at least: 3.0
 Tested up to: 4.3.1
-Stable tag: 1.0.0
+Stable tag: 1.0.1
 
 fields_all placeholder without html.
 
@@ -42,6 +42,9 @@ Copy the Code from gravity_all_fields_plain.php into you functions.php
 Then you can use the {fields_all_plain} placeholder in your notifications.
 
 == Changelog ==
+
+= 1.0.1, October 27, 2015 =
+- New: 'name' field support.
 
 = 1.0.0 =
 - Initial Revision

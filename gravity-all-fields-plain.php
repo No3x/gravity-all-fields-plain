@@ -3,7 +3,7 @@
    Plugin Name: Gravity all_fields plain
    Plugin URI: http://wordpress.org/extend/plugins/gravity-all-fields-plain/
    Support URI: https://github.com/No3x/gravity-all-fields-plain/issues
-   Version: 1.0.0
+   Version: 1.0.1
    Author: Christian Z&ouml;ller
    Author URI: http://no3x.de/
    Description: Use all_fields placeholder in gravityforms notification template but without html.
@@ -56,10 +56,7 @@ if( ! function_exists( 'gravity_all_fields_plain' ) ) {
 			if( strpos( $notification['message'], $match[0] ) !== false ) {
 				$notification['message'] = str_replace( $match[0], '', $notification['message'] );
 				foreach( $form['fields'] as $id => $field ) {
-					if( ! array_key_exists( $field['id'], $entry ) ) {
-						continue;
-					}
-					$message = $entry[$field['id']];
+					$message = gravitiy_extract_value( $field, $entry );
 					$notification['message'] .= $field['label'] . ': ' . $message . PHP_EOL;
 				}
 			}
@@ -67,4 +64,20 @@ if( ! function_exists( 'gravity_all_fields_plain' ) ) {
 		return $notification;
 	}
 	add_filter( 'gform_notification',  'gravity_all_fields_plain', 10, 3 );
+}
+
+if( ! function_exists( 'gravitiy_extract_value' ) ) {
+	function gravitiy_extract_value( $field, $entry ) {
+		$field_id = rgar($field, 'id');
+		if( !empty( $field_id ) ) {
+			switch( $field['type'] ) {
+				case 'name':
+					return rgar( $entry, "$field_id.3" ) . ' ' .  rgar( $entry, "$field_id.6" );
+					break;
+				default:
+					return rgar( $entry, "$field_id" );
+			}
+		}
+		return '';
+	}
 }
